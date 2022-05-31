@@ -1,0 +1,10 @@
+C:\Users\12345\source\repos\Object List\Object List\bin\Debug\Object List.exe.config
+C:\Users\12345\source\repos\Object List\Object List\bin\Debug\Object List.exe
+C:\Users\12345\source\repos\Object List\Object List\bin\Debug\Object List.pdb
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object List.csprojAssemblyReference.cache
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object_List.Form1.resources
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object_List.Properties.Resources.resources
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object List.csproj.GenerateResource.cache
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object List.csproj.CoreCompileInputs.cache
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object List.exe
+C:\Users\12345\source\repos\Object List\Object List\obj\Debug\Object List.pdb

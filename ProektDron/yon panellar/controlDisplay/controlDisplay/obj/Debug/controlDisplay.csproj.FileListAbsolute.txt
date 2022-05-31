@@ -1,0 +1,10 @@
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\bin\Debug\controlDisplay.exe.config
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\bin\Debug\controlDisplay.exe
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\bin\Debug\controlDisplay.pdb
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.csprojAssemblyReference.cache
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.Form1.resources
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.Properties.Resources.resources
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.csproj.GenerateResource.cache
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.csproj.CoreCompileInputs.cache
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.exe
+C:\Users\12345\source\repos\controlDisplay\controlDisplay\obj\Debug\controlDisplay.pdb

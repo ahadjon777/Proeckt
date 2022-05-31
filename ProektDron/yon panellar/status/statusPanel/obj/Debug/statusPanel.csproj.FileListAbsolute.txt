@@ -1,0 +1,10 @@
+C:\Users\12345\source\repos\status\statusPanel\bin\Debug\statusPanel.exe.config
+C:\Users\12345\source\repos\status\statusPanel\bin\Debug\statusPanel.exe
+C:\Users\12345\source\repos\status\statusPanel\bin\Debug\statusPanel.pdb
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.csprojAssemblyReference.cache
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.Form1.resources
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.Properties.Resources.resources
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.csproj.GenerateResource.cache
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.csproj.CoreCompileInputs.cache
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.exe
+C:\Users\12345\source\repos\status\statusPanel\obj\Debug\statusPanel.pdb

@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0656B753-C92E-43EE-BAFB-1CE2099095C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProektDron</RootNamespace>
+    <AssemblyName>ProektDron</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.2.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.4\lib\net47\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.4.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.4\lib\net47\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=2.1.4.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinPresentation.2.1.4\lib\net47\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gmap\Gmaps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gmap\Gmaps.Designer.cs">
+      <DependentUpon>Gmaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\AqilliBatareya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\AqilliBatareya.Designer.cs">
+      <DependentUpon>AqilliBatareya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\DGPSStatuslari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\DGPSStatuslari.Designer.cs">
+      <DependentUpon>DGPSStatuslari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\ParvozTemplamenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\ParvozTemplamenti.Designer.cs">
+      <DependentUpon>ParvozTemplamenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\QaytaIshlanmaganMalumot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\QaytaIshlanmaganMalumot.Designer.cs">
+      <DependentUpon>QaytaIshlanmaganMalumot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\SensorTemplamenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\SensorTemplamenti.Designer.cs">
+      <DependentUpon>SensorTemplamenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\TC200Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\TC200Status.Designer.cs">
+      <DependentUpon>TC200Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\TzimStatusTemplamenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\TzimStatusTemplamenti.Designer.cs">
+      <DependentUpon>TzimStatusTemplamenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Display\VisualXolatniQoshish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Display\VisualXolatniQoshish.Designer.cs">
+      <DependentUpon>VisualXolatniQoshish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Fayl\GCSDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Fayl\GCSDisplay.Designer.cs">
+      <DependentUpon>GCSDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Fayl\YozibOlish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Fayl\YozibOlish.Designer.cs">
+      <DependentUpon>YozibOlish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\APniOrnatish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\APniOrnatish.Designer.cs">
+      <DependentUpon>APniOrnatish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\BoshqaruvParametrlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\BoshqaruvParametrlari.Designer.cs">
+      <DependentUpon>BoshqaruvParametrlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\FavqulotdaDastasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\FavqulotdaDastasi.Designer.cs">
+      <DependentUpon>FavqulotdaDastasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\GCSSozlamalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\GCSSozlamalar.Designer.cs">
+      <DependentUpon>GCSSozlamalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\JostikniYoqish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\JostikniYoqish.Designer.cs">
+      <DependentUpon>JostikniYoqish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\RFTarmoqKengligi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\RFTarmoqKengligi.Designer.cs">
+      <DependentUpon>RFTarmoqKengligi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\TekshirishSozlamalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Ornatish\TekshirishSozlamalari.Designer.cs">
+      <DependentUpon>TekshirishSozlamalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Parvozdan oldin tekshirish\ParOlTekshirish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Parvozdan oldin tekshirish\ParOlTekshirish.Designer.cs">
+      <DependentUpon>ParOlTekshirish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\BarqarorPlatformaBoshqaruvi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\BarqarorPlatformaBoshqaruvi.Designer.cs">
+      <DependentUpon>BarqarorPlatformaBoshqaruvi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\FotoVazifaniSozlash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\FotoVazifaniSozlash.Designer.cs">
+      <DependentUpon>FotoVazifaniSozlash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\MGSeriyaGimbalNazorat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Vazifa\MGSeriyaGimbalNazorat.Designer.cs">
+      <DependentUpon>MGSeriyaGimbalNazorat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Xarita\ImportXarita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Xarita\ImportXarita.Designer.cs">
+      <DependentUpon>ImportXarita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Xarita\XaritagaOtish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Xarita\XaritagaOtish.Designer.cs">
+      <DependentUpon>XaritagaOtish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\Haqida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\Haqida.Designer.cs">
+      <DependentUpon>Haqida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\Litsenziya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\Litsenziya.Designer.cs">
+      <DependentUpon>Litsenziya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\YuklabOlishUchunLitsenziya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InTextSplit\Yordam\YuklabOlishUchunLitsenziya.Designer.cs">
+      <DependentUpon>YuklabOlishUchunLitsenziya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RightInstrument\Tepa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RightInstrument\Tepa.Designer.cs">
+      <DependentUpon>Tepa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uskunalar Paneli\uskunalarPaneli.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Uskunalar Paneli\uskunalarPaneli.Designer.cs">
+      <DependentUpon>uskunalarPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="video\Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="video\Video.Designer.cs">
+      <DependentUpon>Video.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gmap\Gmaps.resx">
+      <DependentUpon>Gmaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\AqilliBatareya.resx">
+      <DependentUpon>AqilliBatareya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\DGPSStatuslari.resx">
+      <DependentUpon>DGPSStatuslari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\ParvozTemplamenti.resx">
+      <DependentUpon>ParvozTemplamenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\QaytaIshlanmaganMalumot.resx">
+      <DependentUpon>QaytaIshlanmaganMalumot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\SensorTemplamenti.resx">
+      <DependentUpon>SensorTemplamenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\TC200Status.resx">
+      <DependentUpon>TC200Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\TzimStatusTemplamenti.resx">
+      <DependentUpon>TzimStatusTemplamenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Display\VisualXolatniQoshish.resx">
+      <DependentUpon>VisualXolatniQoshish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Fayl\GCSDisplay.resx">
+      <DependentUpon>GCSDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Fayl\YozibOlish.resx">
+      <DependentUpon>YozibOlish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\APniOrnatish.resx">
+      <DependentUpon>APniOrnatish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\BoshqaruvParametrlari.resx">
+      <DependentUpon>BoshqaruvParametrlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\FavqulotdaDastasi.resx">
+      <DependentUpon>FavqulotdaDastasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\GCSSozlamalar.resx">
+      <DependentUpon>GCSSozlamalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\JostikniYoqish.resx">
+      <DependentUpon>JostikniYoqish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\RFTarmoqKengligi.resx">
+      <DependentUpon>RFTarmoqKengligi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Ornatish\TekshirishSozlamalari.resx">
+      <DependentUpon>TekshirishSozlamalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Parvozdan oldin tekshirish\ParOlTekshirish.resx">
+      <DependentUpon>ParOlTekshirish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Vazifa\BarqarorPlatformaBoshqaruvi.resx">
+      <DependentUpon>BarqarorPlatformaBoshqaruvi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Vazifa\FotoVazifaniSozlash.resx">
+      <DependentUpon>FotoVazifaniSozlash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Vazifa\MGSeriyaGimbalNazorat.resx">
+      <DependentUpon>MGSeriyaGimbalNazorat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Xarita\ImportXarita.resx">
+      <DependentUpon>ImportXarita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Xarita\XaritagaOtish.resx">
+      <DependentUpon>XaritagaOtish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Yordam\Haqida.resx">
+      <DependentUpon>Haqida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Yordam\Litsenziya.resx">
+      <DependentUpon>Litsenziya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InTextSplit\Yordam\YuklabOlishUchunLitsenziya.resx">
+      <DependentUpon>YuklabOlishUchunLitsenziya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RightInstrument\Tepa.resx">
+      <DependentUpon>Tepa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uskunalar Paneli\uskunalarPaneli.resx">
+      <DependentUpon>uskunalarPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="video\Video.resx">
+      <DependentUpon>Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-green-round-trafficlight-icon-255127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-green-round-trafficlight-icon-2551271.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty_folder_file_icon_219504.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
